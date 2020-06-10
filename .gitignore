@@ -5,12 +5,13 @@ __pycache__/
 
 
 #data
-data/
+data
 
 #env
 data_science_project.egg-info
-project-env
+personal-project-env
 H:\personal-project\.idea
+
 
 # C extensions
 *.so
@@ -145,4 +146,5 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+/.idea
 /.idea
