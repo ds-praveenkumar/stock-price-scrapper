@@ -1,0 +1,16 @@
+name: data-science-project
+dependencies:
+- python=3.7
+- pip>=14.0
+- setuptools
+- pystan
+- fbprophet
+- pytorch
+- beautifulsoup4
+- pip:
+    - '--editable=.'
+    - pandas
+    - numpy
+    - requests
+    - matplotlib
+    - jupyter
