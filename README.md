@@ -1,4 +1,4 @@
-# stock-price-scrapper
+# Stock Price Scrapper
 scraps the stock price from google search
 
 ### Setup

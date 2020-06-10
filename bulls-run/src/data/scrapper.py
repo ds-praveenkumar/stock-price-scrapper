@@ -5,11 +5,13 @@
 # feature: scraps news and saves to data folder
 
 import requests
-from bs4 import BeautifulSoup as bs
+from bs4 import BeautifulSoup  as bs
+
 import config
 import logging
-import re
+
 import time
+from  datetime import date
 import os
 
 FORMATTER = config.LOGGING['FORMATTER']
@@ -50,7 +52,7 @@ def get_stocks_list(url):
             print('pt_change: pos', pt_change)
         logger.info('price scrapper for ',config.stock['Stock_name'])
 
-        path = os.path.join(os.path.pardir,'data',config.data['file_name']+'.csv')
+        path = os.path.join(os.getcwd(),'data',config.data['file_name']+'_'+date.today().__str__()+'.csv')
         ts = time.strftime(config.data['time_format'], time.localtime())
 
         if not os.path.exists(path):
@@ -83,7 +85,7 @@ def main():
     url = config.stock['stock_url']
     while True:
         get_stocks_list(url=url)
-        time.sleep(60 * 2)
+        time.sleep(config.stock['sleep_time'])
 
 if __name__ == '__main__':
     main()
