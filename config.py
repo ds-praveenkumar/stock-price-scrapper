@@ -7,11 +7,13 @@
 stock = dict(
     stock_url =  'https://shorturl.at/lsxMT',
     Stock_name = 'DMART',
+    sleep_time = (60 * 2),
 )
 
 data = dict(
     file_name = 'dmart',
     time_format = '%Y-%m-%d %H:%M:%S',
+
 
 )
 

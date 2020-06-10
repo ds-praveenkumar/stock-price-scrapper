@@ -7,9 +7,13 @@
 from setuptools import setup,find_packages
 
 setup(
-    name = 'data-science-project',
+    name = 'personal-project-env',
     version='0.1.0',
     licence='MIT',
     description='project for personal interest',
-    packages=find_packages('bulls-run.src','bulls-run')
+    packages=find_packages('bulls-run.src','bulls-run'),
+    install_requires=[
+        'requests',
+        'beautifulsoup4',
+    ],
 )
