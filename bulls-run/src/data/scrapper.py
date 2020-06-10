@@ -6,10 +6,8 @@
 
 import requests
 from bs4 import BeautifulSoup  as bs
-
 import config
 import logging
-
 import time
 from  datetime import date
 import os
@@ -34,7 +32,7 @@ def get_stocks_list(url):
     try:
         raw_date = requests.get(url)
         soup = bs( raw_date.content,'html.parser')
-        filtered_soups = soup.find_all('div',class_='BNeawe iBp4i AP7Wnd')
+        filtered_soups = soup.find_all('div', class_='BNeawe iBp4i AP7Wnd')
         content = []
         for li in filtered_soups:
             content.append(li.getText().split('\n')[0])
@@ -89,6 +87,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
